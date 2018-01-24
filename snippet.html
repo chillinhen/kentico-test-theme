@@ -1,0 +1,22 @@
+<li class="item">
+<a href="<%# GetDocumentUrl() %>" title="<%# Eval("Titel") %>" >
+<img src="<%# GetFileUrl("HomeBild") %>" alt="<%# Eval("Titel") %>" />
+     <p class="caption">
+        <strong><%# Eval("Titel") %></strong>
+        <%# Eval("TeaserText") %>
+    </p>
+</a>
+</li>
+  
+  custom.Demetec_Loesung.DemetecLoesung_Home.chi_Portfolio
+  
+  
+  <div class="flexslider">
+           <ul class="slides">
+               
+
+               $cmsj(".carousel2d .jCarouselLite").jCarouselLite({
+               btnNext: ".ppright",
+               btnPrev: ".ppleft",
+               visible: 5
+               });

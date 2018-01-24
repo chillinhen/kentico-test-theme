@@ -1,0 +1,2039 @@
+﻿/*--------------------------------------------------------------------------------------------------------- Helper Styles */
+.group:before,
+.group:after {
+content: " ";
+display: table;
+}
+.group:after, body > form:after {
+clear: both;
+}
+.group {
+*zoom: 1;
+}
+
+.hiddenspan {
+display:block;
+text-indent:-10000px;
+}
+.cleaner {
+clear:both;
+height:0px;
+overflow:hidden;
+}
+.hiddenbutton {
+display:none !important;
+}
+strong, .bold {
+font-weight:bold !important;
+}
+em, .italic {
+font-style:italic !important;
+font-weight:normal !important;
+}
+ol {
+list-style-type:decimal;
+list-style-position:outside;
+color: #656773;
+}
+ol  li {
+margin:10px 0 5px 25px;
+}
+a:link, a:visited {
+text-decoration:none;
+}
+.inhalttext a:link, .inhalttext a:visited {
+border-bottom:1px solid #666;
+display:inline-block;
+line-height:1.3;
+color:#444;
+}
+.inhalttext a:active, .inhalttext a:hover {
+text-decoration:none;
+color:#111;
+}
+/*--------------------------------------------------------------------------------------------------------- BOXMODEL */
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing:    border-box;
+box-sizing:         border-box;
+}
+
+/*--------------------------------------------------------------------------------------------------------- CONTAINER */
+
+html, form, body {
+
+}
+html {
+font-family: 'Lato', sans-serif;
+background:#000 url(/App_themes/Demetec/bilder/bg_header.png) fixed repeat 50% 50%;
+height:auto;
+}
+body {
+background:transparent url(/App_themes/Demetec/bilder/bg_all.png) no-repeat 50% 0;
+}
+.wrapper {
+height:100%;
+position:relative;
+padding: 0;
+width:100%;
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -250px auto;
+/* background:transparent url(/App_themes/Demetec/bilder/bg_all_left.png) no-repeat 0 100%; */
+}
+.main {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+padding:0 0 250px 0;
+margin:auto;
+position:relative;
+z-index:0;
+}
+.row-bg .main, .buehne.home .main {
+padding:0 0 0 0;
+}
+.buehne.home.kunden-box {
+border-top:1px solid #cfcfcf;
+padding:0 0 .5em 0;
+}
+
+footer {
+clear:both;
+padding:0;
+margin:0 0 0 0;
+width:100%;
+font-size:0.80em;
+color:#545454;
+text-align:left;
+width:100%;
+position:relative;
+z-index:100;
+overflow:hidden;
+background:transparent url(/App_themes/Demetec/bilder/bg_header.png)  repeat 0 0;
+height:250px;
+}
+
+footer:before {
+content:"";
+display:block;
+width:120px;
+height:200px;
+background:transparent url(/App_themes/Demetec/bilder/footer-right.png) no-repeat 0 50%;
+position:absolute;
+right:-80px;
+top:50%;
+margin:-100px 0 0 0;
+
+}
+.footer-inner {
+padding:2em 1em 1em 1em;
+margin:auto;
+border-top: 1px solid #c2c2c2;
+width:100%;
+background:transparent url(/App_themes/Demetec/bilder/bg_all_left.png) no-repeat 50% 50%;
+height:100%;
+}
+.breadcrumb-wrapper + .footer-inner {
+border-top:0px solid #AA0061;
+}
+.footer-wrap {
+max-width:1024px;
+margin:auto;
+overflow:hidden;
+}
+.footer-col {
+float:left;
+width:25%;
+padding: 1em;
+position:relative;
+text-align:center;
+vertical-align:top;
+}
+.footer-title {
+color:#545454;
+font-size:1.5em;
+margin:0 0 1em 0;
+background:transparent url(/App_themes/Demetec/bilder/arrow-footer-title.png) no-repeat 0 50%;
+padding:0 0 0 13px;
+text-align:left;
+font-weight: 400;
+}
+.svg .footer-title {
+background:transparent url(/App_themes/Demetec/bilder/arrow-footer-title.svg) no-repeat 0 50%;
+}
+footer p, footer li {
+color:#545454;
+font-size:1.1em;
+text-align:left;
+font-weight: 400;
+}
+footer ul {
+padding:0 0 0 0;
+list-style:none outside;
+}
+footer li {
+margin:0 0 .6em 0
+}
+footer li a {
+background:transparent url(/App_themes/Demetec/bilder/arrow-footer.png) no-repeat 0 50%;
+padding:0 0 0 15px;
+}
+.svg footer li a {
+background:transparent url(/App_themes/Demetec/bilder/arrow-rel.svg) no-repeat 0 50%;
+
+}
+footer a:link, footer a:visited {
+display:inline-block;
+color:#545454;
+}
+footer a:hover, footer a:active {
+display:inline-block;
+color:#545454;
+}
+.main-header {
+width:100%;
+overflow:visible;
+padding:0;
+position:relative;
+z-index:999;
+visibility:visible;
+background:transparent url(/App_themes/Demetec/bilder/bg_header.png) repeat 50% 50%;
+background-color:rgba(255,255,255,0.5);
+height:102px;
+border-bottom:1px solid #C2C2C2;
+}
+.main-header:after {
+content:"";
+display:none;
+height:1px;
+position:absolute;
+bottom:-1px;
+left:0;
+width:100%;
+background:#c4c4c4;
+}
+
+.header-inner {
+max-width:1024px;
+margin:auto;
+background:transparent url(/App_themes/Demetec/bilder/bg_all_left.png) no-repeat 100% 50%;
+}
+.header_logo {
+width:22%;
+max-width:300px;
+float:left;
+position:relative;
+left:0;
+top:0;
+z-index:80;
+visibility:visible;
+height:100px;
+margin:0 1% 0 1%;
+}
+	.logo {
+	display:block;
+	background:transparent url(/App_themes/Demetec/bilder/demetec-logo.svg) no-repeat 50% 50%;
+	width:282px;
+	height:100px;
+	opacity:.85;
+	}
+
+/*--------------------------------------------------------------------------------------------------------- TOPNAV */
+.topnav {
+float:right;
+width:60%;
+-moz-transition:all 0.4s ease-out 0s;
+-webkit-transition:all 0.4s ease-out 0s;
+-o-transition:all 0.4s ease-out 0s;
+-ms-transition:all 0.4s ease-out 0s;
+transition:all 0.4s ease-out 0s;
+position:relative;
+z-index:999;
+height:101px;
+}
+.niv1CMSListMenuUL, .niv_2CMSListMenuUL {
+margin:0;
+padding:0;
+height:auto;
+}
+.niv1CMSListMenuUL {
+height:100%;
+}
+.niv1CMSListMenuLI, .niv1CMSListMenuHighlightedLI,
+.niv1CMSListMenuLI:hover, .niv1CMSListMenuHighlightedLI:hover {
+float:left;
+width:25%;
+position:relative;
+visibility:visible;
+top:0;
+left:0;
+z-index:999;
+height:100%;
+}
+@media only screen and (min-width: 650px) {
+	.niv1CMSListMenuLI:hover > a, .niv1CMSListMenuHighlightedLI:hover > a,
+	.niv1CMSListMenuLI:hover > span, .niv1CMSListMenuHighlightedLI:hover > span   {
+	background:transparent url(/App_themes/Demetec/bilder/loesungen.png) no-repeat 50% 50%;
+	padding:1.5em .5em .5em .5em;
+	-moz-transition:all 0.2s ease-out 0s;
+	-webkit-transition:all 0.2s ease-out 0s;
+	-o-transition:all 0.2s ease-out 0s;
+	-ms-transition:all 0.2s ease-out 0s;
+	transition:all 0.2s ease-out 0s;
+	}
+	#nav_top_LI_0_1_857:hover > a, #nav_top_LI_0_1_857:hover > span {
+	background:transparent url(/App_themes/Demetec/bilder/unternehemen.png) no-repeat 50% 40%;
+	}
+	#nav_top_LI_0_2_857:hover > a, #nav_top_LI_0_2_857:hover > span {
+	background:transparent url(/App_themes/Demetec/bilder/loesungen.png) no-repeat 50% 40%;
+	}
+	#nav_top_LI_0_3_857:hover > a, #nav_top_LI_0_3_857:hover > span {
+	background:transparent url(/App_themes/Demetec/bilder/referenzen.png) no-repeat 50% 40%;
+	}
+	#nav_top_LI_0_4_857:hover > a, #nav_top_LI_0_4_857:hover > span {
+	background:transparent url(/App_themes/Demetec/bilder/kontakt.png) no-repeat 50% 40%;
+	}
+	.svg #nav_top_LI_0_1_857:hover > a, .svg #nav_top_LI_0_1_857:hover > span {
+	background:transparent url(/App_themes/Demetec/bilder/unternehemen.svg) no-repeat 50% 40%;
+	}
+	.svg #nav_top_LI_0_2_857:hover > a, .svg #nav_top_LI_0_2_857:hover > span {
+	background:transparent url(/App_themes/Demetec/bilder/loesungen.svg) no-repeat 50% 40%;
+	}
+	.svg #nav_top_LI_0_3_857:hover > a, .svg #nav_top_LI_0_3_857:hover > span {
+	background:transparent url(/App_themes/Demetec/bilder/referenzen.svg) no-repeat 50% 40%;
+	}
+	.svg #nav_top_LI_0_4_857:hover > a, .svg #nav_top_LI_0_4_857:hover > span {
+	background:transparent url(/App_themes/Demetec/bilder/kontakt.svg) no-repeat 50% 40%;
+	}
+}
+.niv1CMSListMenuLink, .niv1CMSListMenuLinkHighlighted {
+display:block;
+padding:1.7em .5em .5em .5em;
+margin:0;
+font-weight:300;
+font-size:1.4em;
+color:#545454;
+width:100%;
+text-align:center;
+float:right;
+overflow:hidden;
+position:relative;
+top:0;
+left:0;
+visibility:visible;
+z-index:999;
+height:100%;
+background:transparent url(/App_themes/Demetec/bilder/loesungen.svg) no-repeat 50% -150%;
+}
+span.niv1CMSListMenuLink, span.niv1CMSListMenuLinkHighlighted {
+cursor:default;
+display:block;
+height:100%;
+}
+.niv1CMSListMenuLI:hover > a, .niv1CMSListMenuHighlightedLI:hover > a {
+color:#404040;
+}
+.niv_2CMSListMenuUL {
+min-width:100%; 
+width:150%;
+position:absolute;
+top:120px;
+display:block;
+opacity:0;
+z-index:999;
+-moz-transition:all 0.01s ease-out 0s;
+-webkit-transition:all 0.01s ease-out 0s;
+-o-transition:all 0.01s ease-out 0s;
+-ms-transition:all 0.01s ease-out 0s;
+transition:all 0.01s ease-out 0s;
+border-radius:1px;
+border:3px solid #f7f7f7;
+box-shadow:0 0 2px 0px #bfbfbf;
+background:#f4f4f4;
+padding:0 0 0 0;
+height:0;
+overflow:hidden;
+}
+.niv_2CMSListMenuUL:before {
+content:"";
+display:block;
+height:20px;
+width:20px;
+position:absolute;
+top:-23px;
+left:0;
+right:0;
+width:100%;
+background:transparent url(/App_themes/Demetec/bilder/nav-arrow.png) no-repeat 50% bottom;
+}
+.svg .niv_2CMSListMenuUL:before {
+background:transparent url(/App_themes/Demetec/bilder/nav-arrow.svg) no-repeat 50% bottom;
+}
+@media only screen and (min-width: 650px) {
+	.niv1CMSListMenuLink:hover + ul, .niv1CMSListMenuLinkHighlighted:hover + ul, 
+	.niv1CMSListMenuLI:hover > ul, .niv1CMSListMenuHighlightedLI:hover > ul,
+	.niv_2CMSListMenuUL:hover {
+	min-width:100%; 
+	width:150%;
+	left:-25%;
+	right:-25%;
+	display:block;
+	z-index:999;
+	opacity:1;
+	top:90px;
+	-moz-transition:all 0.2s ease-out 0s;
+	-webkit-transition:all 0.2s ease-out 0s;
+	-o-transition:all 0.2s ease-out 0s;
+	-ms-transition:all 0.2s ease-out 0s;
+	transition:all 0.2s ease-out 0s;
+	height:auto;
+	overflow:visible;
+	}
+}
+.niv_2CMSListMenuLink, .niv_2CMSListMenuLinkHighlighted {
+display:block;
+padding:1em .8em 1em 40px;
+font-size:.88em;
+z-index:10;
+color:#404040;
+font-weight: 300;
+letter-spacing:.03em;
+border-bottom:1px solid #efefef;
+background:#f4f4f4;
+background:rgba(244,244,244,1);
+}
+.niv_2CMSListMenuUL li:last-child > a {
+border-bottom:0px solid #efefef;
+} 
+#nav_top_LI_1_1_3890 > a {
+background:#f4f4f4 url(/App_themes/Demetec/bilder/entwicklung.svg) no-repeat 0 50%;
+}
+#nav_top_LI_1_2_3890 > a {
+background:#f4f4f4 url(/App_themes/Demetec/bilder/mobil.svg) no-repeat 0 50%;
+}
+#nav_top_LI_1_3_3890 > a {
+background:#f4f4f4 url(/App_themes/Demetec/bilder/mail.svg) no-repeat 0 50%;
+}
+#nav_top_LI_1_4_3890 > a {
+background:#f4f4f4 url(/App_themes/Demetec/bilder/lupe.svg) no-repeat 0 50%;
+}
+#nav_top_LI_1_5_3890 > a {
+background:#f4f4f4 url(/App_themes/Demetec/bilder/cms.svg) no-repeat 0 50%;
+}
+
+#nav_top_LI_1_1_3891 > a {
+background:#f4f4f4 url(/App_themes/Demetec/bilder/referenz.svg) no-repeat 0 50%;
+}
+#nav_top_LI_1_2_3891 > a {
+background:#f4f4f4 url(/App_themes/Demetec/bilder/referenz.svg) no-repeat 0 50%;
+}
+
+
+#nav_top_UL_1 a:hover, #nav_top_UL_2 a:hover {
+background-color:#fff;
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------- SUBNAV */
+.subnav {
+height:100%;
+min-height:800px;
+width:22%;
+float:left;
+padding:0 0 0 0;
+margin:2em 0 0 1%;
+position:relative;
+top:0;
+left:0;
+z-index:40;
+}
+.sub_1CMSListMenuUL, .sub_2CMSListMenuUL {
+margin:0 0 0 0;
+padding:0 0 0 0;
+}
+.sub_1CMSListMenuHighlightedLI {
+margin:0;
+}
+.sub_1CMSListMenuLink, .sub_1CMSListMenuLinkHighlighted,
+.sub_2CMSListMenuLink, .sub_2CMSListMenuLinkHighlighted {
+display:block;
+color:#fff;
+font-size:.9em;
+font-weight:300;
+padding:0.8em;
+margin:0 0 0 0;
+color:#404040;
+white-space:normal;
+}
+.sub_2CMSListMenuUL {
+background:#fff;
+}
+.sub_2CMSListMenuLink, .sub_2CMSListMenuLinkHighlighted {
+padding:0.6em 0.5em 0.6em 1.5em;
+}
+.sub_1CMSListMenuLink:hover, .sub_2CMSListMenuLink:hover, .sub_2CMSListMenuLinkHighlighted:hover, .sub_2CMSListMenuLinkHighlighted {
+background:#e1e1e1;
+}
+.sub_1CMSListMenuLinkHighlighted, .sub_1CMSListMenuLinkHighlighted:hover {
+background:#587690;
+background:rgba(47, 84, 117, 0.80);
+color:#fff;
+}
+
+/*--------------------------------------------------------------------------------------------------------- CONTENT */
+
+.buehne  {
+min-height:800px;
+margin:0 auto 0 auto;
+max-width:1024px;
+height:100%;
+padding:0 0 0 0; 
+position:relative;
+z-index:-1;
+top:0;
+left:0;
+}
+.buehne.home  {
+width:100%;
+margin:0 auto;
+float:none;
+min-height:0;
+background:#fff;
+border-bottom: 1px solid #F7F7F7;
+padding:2em 0 3em 0;
+background:#fff;
+background: #F7F7F7;
+background: -moz-linear-gradient(top, #f7f7f7 0%, #fcfcfc 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F7F7F7), color-stop(100%,#FCFCFC));
+background: -webkit-linear-gradient(top, #F7F7F7 0%,#FCFCFC 100%);
+background: -o-linear-gradient(top, #f7f7f7 0%,#fcfcfc 100%);
+background: -ms-linear-gradient(top, #f7f7f7 0%,#fcfcfc 100%);
+background: linear-gradient(to bottom, #F7F7F7 0%,#FCFCFC 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#fcfcfc',GradientType=0 );
+z-index:0;
+}
+
+.buehne.home.row-bg {
+border-bottom:0;
+background:#fff;
+background: #606c88;
+background: -moz-linear-gradient(top,  #606c88 19%, #2f4068 56%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(19%,#606c88), color-stop(56%,#2f4068));
+background: -webkit-linear-gradient(top,  #606c88 19%,#2f4068 56%);
+background: -o-linear-gradient(top,  #606c88 19%,#2f4068 56%);
+background: -ms-linear-gradient(top,  #606c88 19%,#2f4068 56%);
+background: linear-gradient(to bottom,  #606c88 19%,#2f4068 56%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#2f4068',GradientType=0 );
+}
+.homeboxen {
+clear:both;
+overflow:hidden;
+margin:auto;
+width:100%;
+}
+.homebox {
+float:left;
+width:33.33333%;
+padding:1em;
+margin:2em 0 0 0; 
+text-align:center;
+height:100%;
+}
+.hb1 {
+border-right:1px solid #fff;
+}
+.hb2 {
+border-left:1px solid #cfcfcf;
+border-right:1px solid #cfcfcf;
+}
+.hb3 {
+border-left:1px solid #fff;
+}
+.hb_titel {
+font-size:1.2em;
+}
+.hb_text {
+font-size:0.9em;
+min-height:70px;
+}
+/*--------------------------------------------------------------------------------------------------------- HOME TEASER */
+.loesung_pic {
+vertical-align:middle;
+text-align:center;
+}
+.loesungen_home {
+width:100%;
+padding:0;
+margin:0;
+overflow:hidden;
+}
+.loesungen_home .loesung_pic {
+width:60%;
+overflow:hidden;
+-moz-transition:all 0.4s ease-out 0s;
+-webkit-transition:all 0.4s ease-out 0s;
+-o-transition:all 0.4s ease-out 0s;
+-ms-transition:all 0.4s ease-out 0s;
+transition:all 0.4s ease-out 0s;
+}
+.loesungen_home .loesung_pic img {
+max-width:100%;
+height:auto !important;
+}
+
+.top_loesung {
+display:block;
+overflow:hidden;
+padding:0em;
+position:relative;
+visibility:visible;
+top:0;
+left:0;
+width:80%;
+height:302px;
+margin:auto;
+}
+.top_loesung .loesung_info {
+position:absolute;
+top:0;
+right:0%;
+width:40%;
+color:#fff;
+-moz-transition:all 0.4s ease-out 0s;
+-webkit-transition:all 0.4s ease-out 0s;
+-o-transition:all 0.4s ease-out 0s;
+-ms-transition:all 0.4s ease-out 0s;
+transition:all 0.4s ease-out 0s;
+text-shadow:1px 1px 2px #4C5261;
+}
+.top_loesung .loesung_title {
+color:#fff;
+text-transform:uppercase;
+font-size:1.7em;
+font-weight: 300;
+}
+.top_loesung .loesung_text {
+color:#fff;
+}
+/* .loesungen_home .top_loesung:hover .loesung_info {
+-moz-transition:all 5s ease-out 0s;
+-webkit-transition:all 5s ease-out 0s;
+-o-transition:all 5s ease-out 0s;
+-ms-transition:all 5s ease-out 0s;
+transition:all 5s ease-out 0s;
+-webkit-transform: translate3d(-5%,0,0);
+-moz-transform: translate3d(-5%,0,0);
+-ms-transform: translate3d(-5%,0,0);
+-o-transform:translate3d(-5%,0,0);
+transform:translate3d(-5%,0,0);
+}
+.loesungen_home .top_loesung:hover .loesung_pic {
+overflow:hidden;
+-moz-transition:all 5s ease-out .2s;
+-webkit-transition:all 5s ease-out .2s;
+-o-transition:all 5s ease-out .2s;
+-ms-transition:all 5s ease-out .2s;
+transition:all 5s ease-out .2s;
+-webkit-transform: translate3d(50px,0,0);
+-moz-transform: translate3d(50px,0,0) ;
+-ms-transform: translate3d(50px,0,0) ;
+-o-transform: translate3d(50px,0,0) ;
+transform:translate3d(50px,0,0) ;
+} */
+
+
+.top_uebersicht {
+background:transparent;
+width: 95%;
+margin:0 auto 2em auto;
+padding:0 ;
+position:relative;
+top:0;
+left:0;
+visibility:visible;
+clear:both;
+}
+.top_uebersicht .top_loesung {
+width:90%;
+margin:0 0 -10px 0;
+height:250px;
+position:relative;
+top:0;
+left:0;
+visibility:visible;
+border:10px solid #fff;
+-moz-transition:all 0.4s ease-out 0s;
+-webkit-transition:all 0.4s ease-out 0s;
+-o-transition:all 0.4s ease-out 0s;
+-ms-transition:all 0.4s ease-out 0s;
+transition:all 0.4s ease-out 0s;
+}
+.top_uebersicht .top_loesung:hover {
+margin:0 0 -10px 0;
+-moz-transition:all 0.4s ease-out 0s;
+-webkit-transition:all 0.4s ease-out 0s;
+-o-transition:all 0.4s ease-out 0s;
+-ms-transition:all 0.4s ease-out 0s;
+transition:all 0.4s ease-out 0s;
+}
+
+.top_uebersicht .loesung_pic {
+margin:0 0 0 0;
+background:#fff;
+overflow:hidden;
+}
+
+/* .loesung_title {
+position:absolute;
+top:20px;
+left:-500px;
+-moz-transition:all 0.4s ease-out 0s;
+-webkit-transition:all 0.4s ease-out 0s;
+-o-transition:all 0.4s ease-out 0s;
+-ms-transition:all 0.4s ease-out 0s;
+transition:all 0.4s ease-out 0s;
+font-size:1.9em;
+}
+.loesung_text {
+position:absolute;
+bottom:5px;
+right:-500px;
+-moz-transition:all 0.4s ease-out 0.1s;
+-webkit-transition:all 0.4s ease-out 0.1s;
+-o-transition:all 0.4s ease-out 0.1s;
+-ms-transition:all 0.4s ease-out 0.1s;
+transition:all 0.4s ease-out 0.1s;
+color:#9F0E58;
+width:300px;
+} */
+
+.top_uebersicht:after {
+content:"";
+display:block;
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:1px;
+
+background:#9F9F9F;
+z-index:95;
+border-bottom:1px solid #F1EDED;
+overflow:hidden;
+}
+.carousel2d {
+width:100%;
+overflow:hidden;
+}
+.jCarouselLite {
+margin:auto;
+}
+.jCarouselLite ul {
+list-style:none outside;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+.jCarouselLite li {
+width:70%;
+}
+.ppleft, .ppright {
+z-index:99;
+display:block;
+position:absolute;
+bottom:-25px;
+height:55px;
+width:55px;
+border-radius:40px;
+}
+.ppright {
+right:-10px;
+
+}
+.ppleft {
+left:-10px;
+
+}
+.ppleft:hover {
+
+}
+.ppright:hover {
+
+}
+.ppleft:active {
+
+}
+.ppright:active {
+
+}
+.ppleft:after, .ppright:after {
+content:"";
+position:absolute;
+top:7.5px;
+width:0;
+height:0;
+z-index:100;
+display:block;
+border-style: solid;
+}
+.ppright:after {
+border-width: 20px 0 20px 34.6px;
+border-color:transparent  transparent transparent #AC3A72;
+right:5px;
+}
+.ppleft:after {
+border-width: 20px 34.6px 20px 0;
+border-color:transparent #AC3A72 transparent transparent;
+left:5px;
+}
+/*---------------------------------------------------------------------------------------------------------TEASER ÜBERSICHT*/
+.uebersicht_list {
+padding:2.5em 4.5em 2em 4em;
+margin:0;
+list-style:none outside;
+overflow:hidden;
+width:100%;
+background:#fff url(/App_themes/Demetec/bilder/bg-inhaltbild.png) repeat 0 0;
+position:relative;
+z-index:0;
+}
+.uebersicht_list li {
+overflow:hidden;
+padding:1px;
+width: 32%;
+float:left;
+margin:0 2% 2% 0;
+box-shadow: 0 0 2px 0 #888;
+background:#fff;
+}
+.uebersicht_list li:nth-child(3n) {
+margin:0 0 2% 0;
+width:32%;
+}
+.loesungteaser {
+overflow:hidden;
+display:block;
+position:relative;
+top:0;
+left:0;
+visibility:visible;
+text-align:center;
+height:190px;
+overflow:hidden;
+width:100%;
+margin:auto;
+background:#fff url(/App_themes/Demetec/bilder/bg_header.png) repeat 50% 50%;
+}
+.loesungteaser .teaserimg {
+height:auto !important;
+margin:auto;
+text-align:center;
+position:absolute;
+z-index:0;
+left:-10%;
+}
+.loesungteaser:hover .teaserimg {
+opacity:0.8;
+}
+.loesungteaser .teaserlogo img {
+height:auto !important;
+margin:auto;
+text-align:center;
+position:absolute;
+z-index:50;
+width:125px;
+height:125px;
+left:0;
+right:0;
+top:0;
+bottom:0;
+}
+.loesungteaser .teaserlogo {
+position:absolute;
+top:0;
+bottom:0;
+width:100%;
+background:#fff;
+background:rgba(255,255,255,0.95);
+padding:1em;
+left:-100%;
+-moz-transition:all 0.2s ease-out 0s;
+-webkit-transition:all 0.2s ease-out 0s;
+-o-transition:all 0.2s ease-out 0s;
+-ms-transition:all 0.2s ease-out 0s;
+transition:all 0.2s ease-out 0s;
+}
+.loesungteaser:hover .teaserlogo {
+left:0;
+right:0;
+top:0;
+bottom:0;
+}
+.loesungteaser h1 {
+position:absolute;
+top:-100%;
+-moz-transition:all 0.2s ease-out 0s;
+-webkit-transition:all 0.2s ease-out 0s;
+-o-transition:all 0.2s ease-out 0s;
+-ms-transition:all 0.2s ease-out 0s;
+transition:all 0.2s ease-out 0s;
+text-align:left;
+font-size:1.15em;
+margin:0;
+width:auto;
+padding:0.3em;
+color:#355A81;
+background: #fff;
+background: rgba(255,255,255,.9);
+box-shadow: 0 0 5px 0px #afafaf;
+left:0;
+right:0;
+z-index:60;
+}
+.teasertext {
+position:absolute;
+display:block;
+right:0;
+left:0;
+bottom:-100%;
+background: #fff;
+background: rgba(255,255,255,.9);
+padding:0.3em;
+font-size:.9em;
+line-height:1.2;
+text-align:left;
+box-shadow:0 -1px 5px 0px #afafaf;
+width:100%;
+color:#B32275;
+-moz-transition:all 0.2s ease-out 0.1s;
+-webkit-transition:all 0.2s ease-out 0.1s;
+-o-transition:all 0.2s ease-out 0.1s;
+-ms-transition:all 0.2s ease-out 0.1s;
+z-index:60;
+}
+.loesungteaser:hover h1 {
+top:0;
+}
+.loesungteaser:hover .teasertext {
+bottom:0;
+} 
+/*--------------------------------------------------------------------------------------------------------- RELATED IMG*/
+.extras {
+width:31%;
+float:right;
+padding:0;
+margin:66px 0 0 0;
+}
+.extras a:hover, .extras a:active {
+background:#e1e1e1;
+-moz-transition:all 0.2s ease-out 0s;
+-webkit-transition:all 0.2s ease-out 0s;
+-o-transition:all 0.2s ease-out 0s;
+-ms-transition:all 0.2s ease-out 0s;
+transition:all 0.2s ease-out 0s;
+}
+.extras h3 {
+font-size:1em;
+font-weight:400;
+margin:0 0 1em -5%;
+background: #afafaf;
+color:#fff;
+color:#404040;
+padding:.5em .5em .5em 6%;
+border-left:5px solid #2263A0;
+background: rgba(0, 0, 0, 0) url(/App_themes/Demetec/bilder/bg_header.png) repeat 50% 50%;
+}
+.sidebox {
+width:100%;
+padding:0em 0em 1em 0em;
+margin:0 0 0 0;
+background: #fff;
+box-shadow: 2px 2px 2px 0px #AFAFAF;
+border-left:1px solid #d5d5d5;
+}
+.ref_liste, .ref_bilderbox  {
+color:#444;
+list-style:none outside;
+margin:0;
+padding:0;
+font-size:.9em;
+}
+.ref_bilderbox {
+padding:0.8em 0.3em 1em 0.3em;
+}
+.rel_referenz, .ref_liste span {
+padding:0.7em;
+display:block;
+color:#404040;
+}
+.rel_referenz {
+background: transparent url(/App_themes/Demetec/bilder/arrow-rel.png) no-repeat 5px 50%;
+padding:.7em .7em .7em 1.5em;
+}
+.svg .rel_referenz {
+background: transparent url(/App_themes/Demetec/bilder/arrow-rel.svg) no-repeat 5px 50%;
+}
+.extras .rel_referenz:hover {
+background: #E1E1E1 url(/App_themes/Demetec/bilder/arrow-rel.png) no-repeat 5px 50%;
+}
+.svg .extras .rel_referenz:hover {
+background: #E1E1E1 url(/App_themes/Demetec/bilder/arrow-rel.svg) no-repeat 5px 50%;
+}
+.ref_liste a {
+color:#404040;
+}
+.rel_img {
+width:49%;
+float:left;
+margin:0 0 10px 0;
+vertical-align:center;
+text-align:center;
+}
+.rel_img:nth-child(even) {
+float:right;
+}
+.rel_img a {
+display:block;
+overflow:hidden;
+max-height:90px;
+vertical-align:middle;
+}
+.rel_img a:hover,.rel_img a:active {
+background:transparent;
+}
+.rel_img img {
+height:90px;
+min-height:90px;
+width:auto !important;
+vertical-align:middle;
+}
+/* HTML */
+p {	
+font-size:1.1em;
+color:#2F2F2F;
+font-weight:300;
+line-height:1.5;
+padding:0px 0px 0px 0px;
+margin:5px 0px 5px 0px;
+}
+h1 { 
+font-size:1.5em;
+color:#355a81;
+font-weight:400;
+padding:0;
+margin:0 0 1em 0;
+}
+h2 { 
+font-size:1.3em;
+color:#355a81;
+font-weight:400;
+margin:1.2em 0 1em 0;
+padding:0;
+}
+h3 { 
+font-size:1.2em;
+color:#355a81;
+font-weight:300;
+margin:1.5em 0 1em 0;
+padding:0;
+}
+h4 { 
+font-size:0.8em;
+color:#355a81;
+font-weight:300;
+margin:0;
+padding:0;
+}
+h5 { 
+font-size:0.8em;
+color:#355a81;
+font-weight:300;
+line-height:0.9;
+margin:25px 0px 5px 0px;
+padding:0px 0px 4px 3px;
+border-bottom:1px solid #dde3ea;
+}
+strong {
+font-weight:400;
+}
+em {
+font-style:italic;
+}
+.title {
+padding:3em 4.5em 1em 2.5em;
+position:relative;
+z-index:10;
+margin:0;
+color:#587690;
+background:#FFF;
+background:#fff url(/App_themes/Demetec/bilder/bg-inhaltbild.png) repeat 0 0;
+}
+.title:before {
+content:"";
+background:transparent url(/App_themes/Demetec/bilder/bg-h1.png) repeat 0 0;
+display:block;
+height:120px;
+width:120px;
+position:absolute;
+left: 10px;
+bottom: -25px
+}
+.inhalttext {
+padding:3em 4.5em 2em 4em;
+margin:0;
+width:69%;
+overflow:hidden;
+float:left;
+height:100%;
+min-height:1000px;
+background: #FFF;
+background: rgba(255, 255, 255, 1);
+box-shadow: 2px 2px 2px 0px #AFAFAF;
+background:#fff url(/App_themes/Demetec/bilder/bg-inhaltbild.png) repeat 0 0;
+}
+.inhalttext-100 {
+width:100%;
+max-width:100%;
+}
+.inhalttext-over {
+min-height:0px;
+box-shadow: none;
+padding:0 4.5em 0 4em;
+}
+.inhalttext ul {
+padding:0px 0px 0px 25px;
+margin:0px 0px 10px 0px;
+}
+.inhalttext li {
+list-style-type:square;
+font-size:.95em;
+color:#444;
+font-weight:normal;
+line-height:1.5;
+padding:0 0 0 0;
+margin:0 0 0.8em 0;
+}
+.inhalttext h1 {
+clear:both;
+position:relative;
+}
+.inhalttext h1:before {
+content:"";
+background:transparent url(/App_themes/Demetec/bilder/bg-h1.png) repeat 0 0;
+display:block;
+height:120px;
+width:120px;
+position:absolute;
+left:-50px;
+top:-45px;
+}
+.inhalttext-100 h1 {
+margin:1em 0 1em 0em;
+}
+.inhalttext-100 h1:before {
+content:"";
+background:transparent url(/App_themes/Demetec/bilder/bg-h1.png) repeat 0 0;
+display:block;
+height:120px;
+width:120px;
+position:absolute;
+left:-50px;
+top:-45px;
+}
+.inhalttext p {
+font-size:.95em;
+color:#111;
+margin:0.8em 0;
+}
+.inhalttext img {
+float:none;
+margin:0 0 0 1em;
+}
+.inhalttext .inhalt_bild {
+margin:0 0 1.5em 0;
+padding:0 0 0 0;
+max-height:350px;
+float:none;
+overflow:hidden;
+text-align:center;
+background:transparent url(/App_themes/Demetec/bilder/bg-inhaltbild.png) repeat 0 0;
+width:100%;
+}
+.inhalttext .inhalt_bild img{
+float:none;
+margin:0 auto;
+padding:5px;
+display:inline;
+max-width:100%;
+height:auto !important;
+}
+.inhalttext  .img_unternehmen {
+float:right;
+margin:-60px 0 0 2em;
+}
+.inhalt_logo {
+position:absolute;
+left:-5px;
+top:66px;
+border-left: 5px solid #2263A0;
+background: transparent url(/App_themes/Demetec/bilder/bg_header.png) repeat 50% 50%;
+box-shadow: 2px 0 2px 0 #d3d3d3;
+padding:.5em;
+}
+.inhalt_logo img {
+margin:0;
+}
+.kontakt-box {
+width:40%;
+float:left;
+}
+.anfahrt {
+width:60%;
+float:left;
+}
+.google-map {
+width:100%;
+float:left;
+overflow:hidden;
+margin:0;
+padding:0 0 1em 0;
+text-align:center;
+background: #FFF;
+box-shadow: 2px -2px 2px 0px #AFAFAF;
+position:relative;
+background:#fff url(/App_themes/Demetec/bilder/bg-inhaltbild.png) repeat 0 0;
+}
+.google-map a {
+display:block;
+border:0 !important;
+margin:0 auto !important;
+width:100%;
+}
+.google-map img {
+margin:0 auto !important;
+}
+.google-map > div {
+width:100% !important;
+}
+
+
+/* DLS */ 
+.movelo_navi, .eintrag_navi, .eintrag_infos hr {
+display:none;
+}
+.inhalttext .eintrag_infos a {
+display:block;
+width:auto;
+margin:0.4em 0;
+border:0;
+}
+.detail_beschreibung {
+margin:0 0 1.5em 1em;
+padding:0 0 0 1em;
+overflow:hidden;
+float:left;
+width:45%;
+}
+.infos_titel {
+margin:0;
+}
+.eintrag_infos {
+float:left;
+width:50%;
+border-right:1px solid #afafaf;
+margin:0 0 1.5em 0em;
+padding:0 2em 0 0;
+}
+/* SITEMAP */
+.inhalttext .CMSSiteMapList {
+padding:0 0 0 0.5em;
+margin:2em 0 0.5em 1em;
+}
+.inhalttext .CMSSiteMapListItem {
+padding:0 0 0 0;
+margin:0 0 0 0;
+}
+.inhalttext .CMSSiteMapList li {
+list-style: none outside;
+margin:0 0 1em 0;
+}
+.inhalttext .CMSSiteMapList li ul{
+margin:0 0 .5em 0;
+}
+.inhalttext .CMSSiteMapList li ul li{
+margin:0 0 .5em 0;
+}
+.inhalttext .CMSSiteMapList li a {
+font-weight:bold;
+display:block;
+border:0;
+}
+.svg .inhalttext .CMSSiteMapList li a {
+background: rgba(0, 0, 0, 0) url(/App_themes/Demetec/bilder/arrow-footer-title.svg) no-repeat 0 50%;
+}
+.inhalttext .CMSSiteMapList > li > a {
+color: #545454;
+font-size: 1.2em;
+margin: 0 0 .5em 0;
+background: rgba(0, 0, 0, 0) url(/App_themes/Demetec/bilder/arrow-footer-title.png) no-repeat 0 50%;
+padding: 0 0 0 13px;
+text-align: left;
+font-weight: 400;
+}
+.inhalttext .CMSSiteMapList li ul li a {
+padding: 0 0 0 22px;
+font-weight:normal;
+display:inline-block;
+background: url("/App_themes/Demetec/bilder/arrow-rel.png") no-repeat scroll 5px 50% transparent;
+}
+.svg .inhalttext .CMSSiteMapList li ul li a {
+background: url("/App_themes/Demetec/bilder/arrow-rel.svg") no-repeat scroll 5px 50% transparent;
+}
+.inhalttext .CMSSiteMapList li ul li ul li a, .svg .inhalttext .CMSSiteMapList li ul li ul li a {
+font-weight:normal;
+display:inline-block;
+font-size: 1.1em;
+padding:0 0 0 1.5em;
+background:none;
+}
+.inhalttext .CMSSiteMapList li ul li ul li ul li a {
+font-weight:normal;
+display:inline-block;
+border-width:0px;
+}
+.CMSSiteMapLink {
+margin:0.5em 0;
+}
+/* HTML ENDE */
+
+/* BUTTONS */
+.button {
+position:relative;
+font-weight:400;
+display:inline-block;
+width:auto;
+clear:both;
+overflow:hidden;
+margin:0.8em 0.5em;
+padding:0.5em;
+border-radius:2px;
+background: #ffffff;
+background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5));
+background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%);
+background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%);
+background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%);
+background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+border:1px solid #cfcfcf !important;
+color: #949494 !important;
+line-height:1 !important;
+text-shadow: 1px 1px #FFF;
+-moz-transition:all 0.3s ease-out 0s;
+-webkit-transition:all 0.3s ease-out 0s;
+-o-transition:all 0.3s ease-out 0s;
+-ms-transition:all 0.3s ease-out 0s;
+transition:all 0.3s ease-out 0s;
+vertical-align:middle;
+}
+.button:hover {
+background: #ffffff;
+background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 51%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(51%,#e5e5e5));
+background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 51%);
+background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 51%);
+background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 51%);
+background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 51%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+-moz-transition:all 0.2s ease-out 0s;
+-webkit-transition:all 0.2s ease-out 0s;
+-o-transition:all 0.2s ease-out 0s;
+-ms-transition:all 0.2s ease-out 0s;
+transition:all 0.2s ease-out 0s;
+}
+.button:active {
+-moz-transition:all 0.05s ease-out 0s;
+-webkit-transition:all 0.05s ease-out 0s;
+-o-transition:all 0.05s ease-out 0s;
+-ms-transition:all 0.05s ease-out 0s;
+transition:all 0.05s ease-out 0s;
+position:relative;
+top:1px;
+}
+.button-nm {
+margin:0.8em 0 !important;
+}
+.pagenav {
+margin:3em 0;
+}
+.pagenav .button {
+font-size:.9em;
+}
+.btn-back {
+float:left;
+margin:0 !important;
+clear:none !important;
+padding:.5em .5em .5em 20px;
+}
+.btn-back:before {
+content:"";
+display:block;
+position:absolute;
+top:0;
+bottom:0;
+left:5px;
+width:14px;
+height:100%;
+background:transparent url(/App_themes/Demetec/bilder/ico-back.png) no-repeat 0 50%;
+}
+.svg .btn-back:before {
+background:transparent url(/App_themes/Demetec/bilder/ico-back.svg) no-repeat 0 50%;
+}
+.btn-print {
+float:right;
+margin:0 !important;
+clear:none !important;
+padding:.5em .5em .5em 20px;
+}
+.btn-print:before {
+content:"";
+display:block;
+position:absolute;
+top:0;
+bottom:0;
+left:5px;
+width:14px;
+height:100%;
+background:transparent url(/App_themes/Demetec/bilder/ico-print.png) no-repeat 0 50%;
+}
+.svg .btn-print:before {
+background:transparent url(/App_themes/Demetec/bilder/ico-print.svg) no-repeat 0 50%;
+}
+.nav-button {
+padding:.5em .5em .5em 20px;
+}
+.nav-button:before {
+content:"";
+display:block;
+position:absolute;
+top:0;
+bottom:0;
+left:5px;
+width:14px;
+height:100%;
+background:transparent url(/App_themes/Demetec/bilder/ico-nav.png) no-repeat 0 50%;
+}
+.svg .nav-button:before {
+background:transparent url(/App_themes/Demetec/bilder/ico-nav.svg) no-repeat 0 50%;
+}
+.btn-more {
+padding:.5em 20px .5em .5em;
+}
+.btn-more:before {
+content:"";
+display:block;
+position:absolute;
+top:0;
+bottom:0;
+right:3px;
+width:14px;
+height:100%;
+background:transparent url(/App_themes/Demetec/bilder/ico-more.png) no-repeat 0 50%;
+}
+.svg .nav-more:before {
+background:transparent url(/App_themes/Demetec/bilder/ico-more.svg) no-repeat 0 50%;
+}
+.btn-download {
+padding:.5em .5em .5em 20px;
+}
+.btn-download:before {
+content:"";
+display:block;
+position:absolute;
+top:0;
+bottom:0;
+left:5px;
+width:14px;
+height:100%;
+background:transparent url(/App_themes/Demetec/bilder/ico-download.png) no-repeat 0 50%;
+}
+.svg .btn-download:before {
+background:transparent url(/App_themes/Demetec/bilder/ico-download.svg) no-repeat 0 50%;
+}
+
+/*---------------------------------------------------------------------------------------------------------BREADCRUMBS*/
+.breadcrumb-wrapper {
+padding: 0 0 0 2em;
+font-size: .85em;
+background: #747474;
+color: #FFF;
+margin: 0 0 0 0;
+width:100%;
+border-bottom: 1px solid #696969;
+}
+.breadcrumb {
+max-width:1024px;
+margin:auto;
+padding:0 0;
+overflow:hidden;
+color: #FFF;
+position:relative;
+}
+.breadcrumb br {
+display:none;
+}
+.CMSBreadCrumbsLink, .CMSBreadCrumbsCurrentItem {
+display:inline-block;
+padding:0 1em;
+height:30px;
+line-height:30px;
+position:relative;
+font-weight:400;
+vertical-align:middle;
+color:#ddd;
+}
+.CMSBreadCrumbsCurrentItem {
+padding:0 2em 0 2em;
+margin:0 0 0 -1em;
+color: #FFF;
+}
+.breadcrumb a:after, .breadcrumb span:after {
+content:"";
+display:block;
+position:absolute;
+height:30px;
+width:20px;
+background:transparent url(/App_themes/Demetec/bilder/bread-trenner.png) no-repeat 0 0;
+vertical-align:middle;
+right:-7px;
+top:0;
+z-index:100;
+}
+.breadcrumb a:first-child {
+padding:0 1em 0 0;
+}
+.breadcrumb .CMSBreadCrumbsCurrentItem:after {
+display:none;
+}
+
+.CMSBreadCrumbsLink:hover {
+text-decoration:underline;
+}
+
+/*--------------------------------------------------------------------------------------------------------KUNDEN_SLIDER*/
+.client-item {
+width:135px;
+margin: 0 20px 0 0;
+}
+.client-link {
+width:135px;
+display:block;
+}
+.client-link .client-img {
+max-width:100%;
+width:auto;
+}
+
+
+
+/* ###################################################################################################################################################
+######################################### ------------------- MEDIEQUERIES ---------- ############################################################################ */
+
+.nav-button {
+display:none;
+}
+/*925px*/
+@media only screen and (max-width:61.667em) {
+	.main-header {
+	height:202px;
+	}
+	.header_logo {
+	width:100%;
+	max-width:none;
+	padding:0;
+	margin:0;
+	float:none;
+	}
+	.logo {
+	margin:0 0 0 1em;
+	}
+	.topnav  {
+	margin:auto;
+	float:none;
+	width:100%;
+	}
+	.inhalttext .inhalt_bild {
+	padding:0;
+	text-align:center;
+	margin:0 0 1.5em 0;
+	}
+	.buehne {
+	background:#FFF;
+	}
+	.inhalttext, .sidebox {
+	
+	box-shadow:none;
+	border-left: 0px solid #D5D5D5;
+	position:relative;
+	overflow:visible;
+	}
+	.inhalttext:before {
+	content:"";
+	display:block;
+	width:1px;
+	height:100%;
+	top:0;
+	bottom:0;
+	right:0%;
+	background:#D5D5D5;
+	z-index:9999;
+	position:absolute;
+	}
+	.inhalttext-100:before {
+	background:transparent;
+	}
+	.uebersicht_list li, .uebersicht_list li:nth-child(4n+4), .uebersicht_list li:nth-child(3n)   {
+	width: 32%;
+	margin: 1% 0 3% 2%;
+	}
+	.uebersicht_list li:nth-child(3n+1) {
+	width: 32%;
+	margin: 1% 0 3% 0;
+	clear:left;
+	}
+	.loesungteaser h1, .teasertext {
+	background:#fff;
+	top:0;
+	}
+	.loesungteaser h1 {
+	font-size:1em;
+	}
+	.teaserlogo {
+	display:none;
+	}
+	.teasertext {
+	top:auto;
+	bottom:0;
+	font-size:.9em;
+	}
+	.breadcrumb-wrapper {
+	padding:0 1em;
+	}
+	.inhalttext .img_unternehmen {
+	width:250px;
+	margin: -50px 0 0 2em;
+	}
+}		
+
+/*740px*/
+@media only screen and (max-width:49.333em) {
+	.inhalttext, .extras {
+	width:100%;
+	background: #FFF url(/App_themes/Demetec/bilder/bg-inhaltbild.png) repeat 0 0;
+	}
+	.inhalttext {
+	padding: 3em 4em 1em 4em;
+	}
+	.title {
+	padding:1.3em;
+	}
+	.extras {
+	margin:0;
+	padding:0 4em;
+	}
+	.sidebox {
+	margin:0 0 2em 0;
+	}
+	.inhalttext:before {
+	display:none;
+	}
+	.extras h3 {
+	margin:0 0 1em 0;
+	}
+	footer {
+	height:auto;
+	}
+	.footer-inner {
+	
+	padding:1em 4em;
+	}
+	.footer-col {
+	width:50%;
+	margin:0 0 1em 0;
+	}	
+	.footer-col:nth-child(2n+1) {
+	clear:left;
+	}
+	.loesungteaser {
+	background-size:contain;
+	}
+	.uebersicht_list li {
+	float:left !important;
+	width:49% !important;
+	margin:0 1% 2% 0 !important;
+	clear:none  !important;
+	}
+	.uebersicht_list li:nth-child(2n) {
+	float:left !important;
+	margin:0 0 2% 1% !important;
+	}
+	.uebersicht_list li:nth-child(2n+1) {
+	clear:left !important;
+	}
+}	
+/*650px*/
+@media only screen and (max-width:43.333em) {
+	.nav-button {
+	display:inline-block;
+	margin:0 auto 31px auto;
+	text-align:center;
+	cursor:pointer;
+	}
+	.main-header {
+	height:100px;
+	}
+	.logo {
+	width:40%;
+	background-size:contain;
+	}
+	.topnav {
+	width:auto;
+	height:auto;
+	position:absolute;
+	right:2%;
+	top:30px;
+	width:50%;
+	text-align:center;
+	}
+	.niv1CMSListMenuUL, .top-nav-hid {
+	height:auto;
+	background:#f7f7f7;
+	box-shadow:0 0 2px 0 #cfcfcf;
+	position:relative;
+	display:block;
+	}
+	.top-nav-hid {
+	display:none;
+	}
+	.niv1CMSListMenuUL:before {
+	content: "";
+	display: block;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: -20px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: transparent url(/App_themes/Demetec/bilder/nav-arrow.png) no-repeat 50% bottom;
+	}
+	.niv1CMSListMenuLI, .niv1CMSListMenuHighlightedLI, .niv1CMSListMenuLI:hover, .niv1CMSListMenuHighlightedLI:hover  {
+	float:none;
+	height:auto;
+	width:auto;
+	text-align:left;
+	position:relative;
+	}
+	.niv1CMSListMenuLink, .niv1CMSListMenuLinkHighlighted, .niv1CMSListMenuLink:hover, .niv1CMSListMenuLinkHighlighted:hover  {
+	text-align:left;
+	padding:.5em;
+	float:none;
+	font-size:1.2em;
+	border-bottom:1px solid #e7e7e7;
+	}
+	.niv1CMSListMenuLink:hover + ul, .niv1CMSListMenuLinkHighlighted:hover + ul, 
+	.niv1CMSListMenuLI:hover > ul, .niv1CMSListMenuHighlightedLI:hover > ul,
+	.niv_2CMSListMenuUL:hover {
+	display:none;
+	width:100%;
+	}
+	.niv_2CMSListMenuUL {
+	position:static;
+	width:auto;
+	padding:0 0 0 0;
+	box-shadow:none;
+	width:100%;
+	background:transparent;
+	opacity:1;
+	height:auto;
+	border-bottom:2px solid #afafaf;
+	}
+	.niv_2CMSListMenuUL:before {
+	display:none;
+	}
+	.niv_2CMSListMenuLink, .niv_2CMSListMenuLinkHighlighted {
+	background:#fdfdfd;
+	padding:1em .8em 1em 35px
+	}
+	.niv1CMSListMenuLI:hover > a, .niv1CMSListMenuHighlightedLI:hover > a,
+	.niv1CMSListMenuLI:hover > span, .niv1CMSListMenuHighlightedLI:hover > span   {
+	background:transparent url(/App_themes/Demetec/bilder/loesungen.png) no-repeat 50% 50%;
+	padding:.5em .5em .5em .5em;
+	}
+	.haschilds span:after {
+	content:"";
+	display:block;
+	width:10px;
+	height:10px;
+	position:absolute;
+	right:10px;
+	top:16px;
+	bottom:0;
+	background:transparent url(/App_themes/Demetec/bilder/arrow-nav.png) no-repeat 0 0;
+	}
+	.svg .haschilds span:after {
+	background:transparent url(/App_themes/Demetec/bilder/arrow-nav.svg) no-repeat 0 0;
+	}
+	.haschilds span.aktiv:after {
+	background:transparent url(/App_themes/Demetec/bilder/arrow-nav.png) no-repeat -12px 0;
+	}
+	.svg .haschilds span.aktiv:after {
+	background:transparent url(/App_themes/Demetec/bilder/arrow-nav.svg) no-repeat -12px 0;
+	}
+
+	.google-map img {
+	max-width:100%;
+	height:auto !important;
+	}
+	.kontakt-box, .anfahrt {
+	width:100%;
+	float:left;
+	}
+	.inhalttext-100 {
+	padding:1em 1em 1em 1em
+	}
+	.inhalttext {
+	padding:2em 2em 1em 2em;
+	min-height: 50px;
+	}
+	.extras {
+	padding:0 2em;
+	}
+	.main-header {
+	height:99px;
+	}
+	.inhalttext .img_unternehmen {
+	width:250px;
+	margin: -30px 0 0 2em;
+	}
+}		
+/*480px*/
+@media only screen and (max-width:32.000em) {
+
+	body, .wrapper {
+	background:transparent;
+	}
+	.main-header {
+	height:164px;
+	}
+	.logo {
+	margin:auto;
+	width:100%;
+	background-size:60%;
+	}
+	.nav-button {
+	margin: 0 auto 20px auto;
+	}
+	.topnav  {
+	position:relative;
+	top:0;
+	left:0;
+	width:90%;
+	}
+	.uebersicht_list li, .uebersicht_list li:nth-child(2n)		 {
+	width:100% !important;
+	margin:0 0 6% 0 !important;
+	padding:0 0 1em 0;
+	border-bottom:1px solid #afafaf;
+	}
+	.title {
+	text-align:center;
+	padding: 1em;
+	}
+	.loesungteaser h1 {
+	font-size:1.2em;
+	}
+	.inhalt_logo {
+	position:static;
+	border:0;
+	box-shadow:none;
+	text-align:center;
+	}
+	.inhalttext .inhalt_bild {
+	margin:0 0 1.5em 0;
+	}
+	.rel_img {
+	width:100%;
+	}
+	.rel_img a {
+	height:auto;
+	max-height: none;
+	}
+	.rel_img img {
+	width:80% !important;
+	height:auto !important;
+	}
+	.breadcrumb-wrapper {
+	font-size:.75em;
+	padding:.3em 1em;
+	}
+	.breadcrumb a:after, .breadcrumb span:after {
+	content:">";
+	display:inline-block;
+	background:none;
+	position:static;
+	width:auto;
+	height:auto;
+	margin:0 .5em;
+	}
+	.CMSBreadCrumbsLink, .CMSBreadCrumbsCurrentItem{
+	padding:0;
+	position:static;
+	height: auto;
+	line-height: 1.2;
+	}
+	.breadcrumb a:first-child {
+	padding:0;
+	}
+	.inhalttext .img_unternehmen {
+	width:100%;
+	margin: -30px 0 0 2em;
+	}
+	.top_loesung {
+	width:90%;
+	height:auto;
+	}
+	.loesungen_home .loesung_pic {
+	width:100%;
+	}
+	.top_loesung .loesung_info {
+	position:static;
+	width:100%;
+	text-align:center;
+	margin:1em 0 0 0;
+	}
+	.flexslider {
+	padding:0 .5em;
+	}
+	.flex-direction-nav {
+	display:none;
+	}
+	.homebox  {
+	width:100%;
+	border:0;
+	}
+	.footer-col {
+	width:100%;
+	margin:0 0 1em 0;
+	}	
+	.footer-col:nth-child(2n+1) {
+	clear:left;
+	}
+
+}						
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+		border:0 !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+	.ref_liste a[href]:after {
+        content: " (" attr(href) ")";
+    }
+	.topnav, .pagenav, .breadcrumb-wrapper   {
+	display:none;
+	}
+	body, form {
+	width:600px;
+	margin:auto;
+	overflow:visible;
+	}
+	.inhalttext {
+	width:100%;
+	padding:1em;
+	min-height:0;
+	}
+	.extras {
+	width:100%;
+	}
+	.extras h3 {
+	border-bottom:1px solid #000 !important;
+	margin: 0 0 1em 0;
+	padding: .5em;
+	}
+	.footer-col {
+	display:none;
+	}
+	.footer-col:first-child {
+	display:block;
+	width:100%;
+	}
+	.footer-title {
+	padding:0;
+	}
+	.rel_img {
+	width:100%;
+	}
+	.rel_img a {
+	display: block;
+	overflow: hidden;
+	max-height: none;
+	vertical-align: middle;
+	}
+	.rel_img img {
+	height: auto !important;
+	min-height: 0;
+	width: auto !important;
+	vertical-align: middle;
+	}
+}																			

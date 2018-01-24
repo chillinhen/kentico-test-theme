@@ -1,0 +1,62 @@
+<div class="wrapper group">
+    <header class="main-header group" role="banner">
+        <div class="header-inner group">
+	    <cc1:CMSWebPartZone ID="zoneHeader" runat="server" />	
+	    <cc1:CMSWebPartZone ID="zoneHauptmenue" runat="server" />
+        </div>
+
+    </header>
+
+<cc1:CMSWebPartZone ID="zoneContentHome" runat="server" />
+<cc1:CMSWebPartZone ID="zoneContentHomeRow" runat="server" />
+<cc1:CMSWebPartZone ID="zoneContentHomeClients" runat="server" />
+
+        <cc1:CMSWebPartZone ID="zoneUntermenue" runat="server" />		
+        
+	<cc1:CMSWebPartZone ID="zoneContent" runat="server" />
+        <cc1:CMSWebPartZone ID="zoneExtras" runat="server" />
+
+      
+<cc1:CMSWebPartZone ID="zoneFooter" runat="server" />
+</div>
+<script src="/app_themes/demetec/js/jquery-1.10.2.min.js"></script>
+<script src="/app_themes/demetec/js/main.js"></script>
+<script src="/app_themes/demetec/js/lightbox-2.6.min.js"></script>
+<script src="/app_themes/demetec/js/jquery.flexslider-min.js"></script>
+<script src="/app_themes/demetec/js/jquery.izilla.touchMenuHover.min.js"></script>
+
+<script>
+  $(window).load(function() {
+  $('.topslider').flexslider({
+    animation: "slide",
+    easing: "slide",
+    animationLoop: false,
+    slideshow: false,
+    useCss: true,
+    controlNav: true
+  });
+});
+  
+  
+  
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    easing: "slide",
+    animationLoop: true,
+    slideshow: true,
+    slideshowSpeed: 3500,
+    animationSpeed: 10000,
+    useCss: true,
+    controlNav: false,
+    itemWidth: 135,
+    itemMargin: 20,
+    maxItem:4
+  });
+});
+$(document).ready(function() {
+	$('#nav_top').touchMenuHover({
+		forceiOS: true
+	});
+  });  
+</script>

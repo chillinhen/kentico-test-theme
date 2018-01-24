@@ -1,0 +1,179 @@
+
+/* =============================================================================
+  Variables; Extends & Mixins
+  ========================================================================== */
+
+%bold{font-weight:600};/** depends on font-fammily**/
+/* =============================================================================
+   Basics
+   ========================================================================== */
+/* html element 62.5% font-size for REM use */
+html { font-size: 62.5%; -webkit-text-size-adjust: auto; -ms-text-size-adjust: auto;}
+
+html, body, button, input, select, textarea{ 
+    font-family:$body-font-family;
+    color: $text-color;
+}
+
+::-moz-selection { 
+    text-shadow: none;
+    @include active-style;
+}
+::selection { 
+    text-shadow: none;
+    @include active-style;
+}
+
+// body typography
+body {
+    text-rendering: optimizeLegibility;
+    font-size:$rem-base;
+    font-weight:400;
+    line-height: $base-line-height;
+
+}
+a{
+  @include transition(all .25s ease-in);
+  &,&:link { 
+        text-decoration: none;
+        cursor:pointer;
+    }
+    &:hover,&:focus {outline:none;}
+    &:hover{
+        text-decoration: underline;
+    }
+    &:visited{
+        opacity:.5;
+    }
+    &:visited{ 
+        text-decoration: none !important;
+    }
+}
+
+h1,h2,h3,h4, legend{
+    font-family:$headings-font-family;
+    text-rendering: optimizeLegibility;
+    font-weight:400;
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: -0.035em;
+    color: $heading-text-color;
+    .logo{
+        margin:2em 0 .5em 0;
+    }
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+}
+
+// different font-sizes
+h1 {
+    font-size:2.75em;
+}
+
+h2 {
+    font-size: 1.1em;
+
+    .tiles article > a & {
+        margin: 0;
+    }
+}
+
+h1, h2, h3 {
+    a{
+        &:hover{
+            text-decoration:none;
+            cursor:pointer;
+        }
+    }
+}
+
+
+legend {
+    border{
+        width:1px 0 0 0;
+        style:solid;
+        color:$border-color;
+        margin-top:1em;
+    }
+}
+// paragraph text
+p {
+    margin: $paragraph-margin 0 0;
+}
+
+// lists
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+dl {
+    margin: 0 0 $paragraph-margin;
+    line-height: $base-line-height;
+}
+
+dt {
+    font-weight: bold;
+    /** oder **/
+    @extend %bold;
+}
+
+dd {
+    margin: 0 0 0.5rem;
+}
+
+b,.bold, strong{
+    @extend %bold;
+}
+p, .close{
+    font-size: $rem-base;
+}
+// blockquotes
+blockquote {
+    border-left: 2px solid $brand-primary;
+    position: relative;
+    margin: 1.5rem 1rem 1.5rem 3rem;
+    text-align: left;
+
+    &:before {
+        content: "“";
+        display: block;
+        position: absolute;
+        top: -1rem;
+        left: -3rem;
+        color: $text-muted-color;
+        font-size: 5rem;
+        line-height: 1;
+    }
+}
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-muted { color: $text-muted-color; }
+.text-smaller {font-size: smaller;}
+.uppercase{
+    text-transform:uppercase;
+}
+
+/*** tables ****/
+table {
+    width:100%;
+    margin-bottom:2em;
+}
+/**** Misc ***/
+.screen-reader-text{
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+/* Kleinerer Text */
+.s {
+    font-size: 0.9em;
+}

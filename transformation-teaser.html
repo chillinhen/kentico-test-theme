@@ -1,0 +1,9 @@
+<article class="teaser">
+    <%# IfEmpty(Eval("ArticleTeaserImage"), "", "<span class=image><img alt=\"" + Eval("ArticleName") + "\" src=\"" + GetFileUrl("ArticleTeaserImage") + "?maxsidesize=380\" />" + "</span>") %>
+    <a href="<%# GetDocumentUrl() %>">
+        <h2><%# Eval("ArticleName") %></h2>
+        <div class="content">
+            <p><%# Eval("ArticleTeaserText") %></p>
+        </div>
+    </a>
+</article>
