@@ -20,6 +20,15 @@ $border-color:$light-gray;
 $mainBg:white;
 $bubbleBG:$mainBg;
 
+/** Teaser ***/
+$teaserCol_1:#f2849e;
+$teaserCol_2:#7ecaf6;
+$teaserCol_3:#7bd0c1;
+$teaserCol_4:#c75b9b;
+$teaserCol_5:#ae85ca;
+$teaserCol_6:#8499e7;
+
+
 $bg-panel:#e5e5e4;
 $bd-panel: #D9D9D9;
 
@@ -66,4 +75,4 @@ $text-muted-color:          lighten($text-color,25%);
 
 /* Margins & Paddings */
 $outer-grid:2 * $rem-base;
-$vertical-spacing:2*$rem-base;
+$vertical-spacing:2.5em;

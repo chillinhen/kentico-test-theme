@@ -1,114 +1,32 @@
+/* Basic */
 
-/* global box-sizing */
-*,
-*:after,
-*:before {
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    -webkit-font-smoothing:antialiased;
-    font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
+@-ms-viewport {
+    width: device-width;
 }
-/* external */
-a[href*="//"]:not([href*="http://194.78.155.187/Demetec"]){
-    &:after {
-        @include icon-style ("\f08e", 0, 1, .5em, 1);
-        &.btn{
-            color:white;
-        }
+
+body {
+    -ms-overflow-style: scrollbar;
+}
+
+@media screen and (max-width: 480px) {
+
+    html, body {
+        min-width: 320px;
     }
-}
-/* clear */
-.clear:before,
-.clear:after {
-    content:' ';
-    display:table;
+
 }
 
-.clear:after {
-    clear:both;
-}
-.clear {
-    *zoom:1;
-}
-img {
-    max-width: 100%;
-    height:auto;
-    vertical-align:bottom;
-    .logo & {
-        max-width:none;
-        width: 100%;
-        height:auto;
-    }
+body {
+    background: #ffffff;
 }
 
-.iframe-elastic {
-    position: relative;
-    padding-bottom: 55%;
-    padding-top: 15px;
-    height: 0;
-    overflow: hidden;
-
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-    }
-}
-
-.table-responsive{
-    border:0;
-    @media screen and (max-width:$screen-xs){
-        border-top:1px solid $border-color;
-        border-bottom:1px solid $border-color; 
-    }
-}
-
-.no-display{
-    display:none;
-}
-.ellipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    word-wrap: break-word;
-    display:block;
-}
-/*.post-edit-link{
-    display: block;
-    text-align: right;
-    margin-top: 2em;
-    margin-bottom: -2em;
-}*/
-.btn{
-/*    @include button-style (10px,1em, 1em, $brand-primary );*/
-
-    &:hover, &:focus {
-        color:#fff;
-    }
-    &.btn-inverse{
-        background-color: $bg-inverse;
-        color: $white;
-        background-image: none;
-        background-repeat: repeat-x;
-        border-color: transparent;
-        text-shadow: none;
-
-        .button-group & {
-            margin-right: 1em;
-            color:#fff;
-        }
-    }
-    &.btn-small {
-/*        @include button-style (3px,5px 10px, 0.850em, $brand-primary );*/
-    }
-    .box &{
-        color: $white;
-    }
-    &[disabled] {opacity: 1;}
-
+body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
 }

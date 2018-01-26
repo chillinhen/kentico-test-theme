@@ -1,179 +1,201 @@
+/* Type */
 
-/* =============================================================================
-  Variables; Extends & Mixins
-  ========================================================================== */
-
-%bold{font-weight:600};/** depends on font-fammily**/
-/* =============================================================================
-   Basics
-   ========================================================================== */
-/* html element 62.5% font-size for REM use */
-html { font-size: 62.5%; -webkit-text-size-adjust: auto; -ms-text-size-adjust: auto;}
-
-html, body, button, input, select, textarea{ 
-    font-family:$body-font-family;
-    color: $text-color;
+body, input, select, textarea {
+    color: #585858;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    line-height: 1.75;
 }
 
-::-moz-selection { 
-    text-shadow: none;
-    @include active-style;
-}
-::selection { 
-    text-shadow: none;
-    @include active-style;
-}
+@media screen and (max-width: 1680px) {
 
-// body typography
-body {
-    text-rendering: optimizeLegibility;
-    font-size:$rem-base;
-    font-weight:400;
-    line-height: $base-line-height;
+    body, input, select, textarea {
+        font-size: 14pt;
+    }
 
 }
-a{
-  @include transition(all .25s ease-in);
-  &,&:link { 
-        text-decoration: none;
-        cursor:pointer;
+
+@media screen and (max-width: 1280px) {
+
+    body, input, select, textarea {
+        font-size: 12pt;
     }
-    &:hover,&:focus {outline:none;}
-    &:hover{
-        text-decoration: underline;
-    }
-    &:visited{
-        opacity:.5;
-    }
-    &:visited{ 
-        text-decoration: none !important;
-    }
+
 }
 
-h1,h2,h3,h4, legend{
-    font-family:$headings-font-family;
-    text-rendering: optimizeLegibility;
-    font-weight:400;
-    margin: 0;
-    line-height: 1.3;
-    letter-spacing: -0.035em;
-    color: $heading-text-color;
-    .logo{
-        margin:2em 0 .5em 0;
+a {
+    @include transition(border-bottom-color 0.2s ease);
+    text-decoration: none;
+    color: #585858;
+    #main &{
+        border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
+        &:hover{
+            border-bottom-color: transparent;
+        }
     }
-    a{
-        text-decoration: none;
-        color: $text-color;
-    }
+
 }
 
-// different font-sizes
+a:hover {
+
+    color: #f2849e !important;
+}
+
+strong, b {
+    font-weight: 900;
+}
+
+em, i {
+    font-style: italic;
+}
+
+p {
+    margin: 0 0 2em 0;
+}
+
 h1 {
-    font-size:2.75em;
+    font-size: 2.75em;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 1em 0;
+    letter-spacing: -0.035em;
+}
+
+h1 a {
+    color: inherit;
+}
+
+@media screen and (max-width: 736px) {
+
+    h1 {
+        font-size: 2em;
+        margin: 0 0 1em 0;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    line-height: 1.5;
+    margin: 0 0 2em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
 }
 
 h2 {
     font-size: 1.1em;
+}
 
-    .tiles article > a & {
-        margin: 0;
+h3 {
+    font-size: 1em;
+}
+
+h4 {
+    font-size: 0.8em;
+}
+
+h5 {
+    font-size: 0.8em;
+}
+
+h6 {
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 980px) {
+
+    h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+        display: none;
     }
+
 }
 
-h1, h2, h3 {
-    a{
-        &:hover{
-            text-decoration:none;
-            cursor:pointer;
-        }
+@media screen and (max-width: 736px) {
+
+    h2 {
+        font-size: 1em;
     }
-}
 
-
-legend {
-    border{
-        width:1px 0 0 0;
-        style:solid;
-        color:$border-color;
-        margin-top:1em;
+    h3 {
+        font-size: 0.8em;
     }
-}
-// paragraph text
-p {
-    margin: $paragraph-margin 0 0;
+
 }
 
-// lists
-ol, ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-dl {
-    margin: 0 0 $paragraph-margin;
-    line-height: $base-line-height;
-}
-
-dt {
-    font-weight: bold;
-    /** oder **/
-    @extend %bold;
-}
-
-dd {
-    margin: 0 0 0.5rem;
-}
-
-b,.bold, strong{
-    @extend %bold;
-}
-p, .close{
-    font-size: $rem-base;
-}
-// blockquotes
-blockquote {
-    border-left: 2px solid $brand-primary;
+sub {
+    font-size: 0.8em;
     position: relative;
-    margin: 1.5rem 1rem 1.5rem 3rem;
-    text-align: left;
-
-    &:before {
-        content: "“";
-        display: block;
-        position: absolute;
-        top: -1rem;
-        left: -3rem;
-        color: $text-muted-color;
-        font-size: 5rem;
-        line-height: 1;
-    }
+    top: 0.5em;
 }
 
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-
-.text-muted { color: $text-muted-color; }
-.text-smaller {font-size: smaller;}
-.uppercase{
-    text-transform:uppercase;
+sup {
+    font-size: 0.8em;
+    position: relative;
+    top: -0.5em;
 }
 
-/*** tables ****/
-table {
-    width:100%;
-    margin-bottom:2em;
+blockquote {
+    border-left: solid 4px #c9c9c9;
+    font-style: italic;
+    margin: 0 0 2em 0;
+    padding: 0.5em 0 0.5em 2em;
 }
-/**** Misc ***/
-.screen-reader-text{
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-}
-/* Kleinerer Text */
-.s {
+
+code {
+    background: rgba(144, 144, 144, 0.075);
+    border-radius: 4px;
+    border: solid 1px #c9c9c9;
+    font-family: "Courier New", monospace;
     font-size: 0.9em;
+    margin: 0 0.25em;
+    padding: 0.25em 0.65em;
+}
+
+pre {
+    -webkit-overflow-scrolling: touch;
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+    margin: 0 0 2em 0;
+}
+
+pre code {
+    display: block;
+    line-height: 1.75;
+    padding: 1em 1.5em;
+    overflow-x: auto;
+}
+
+hr {
+    border: 0;
+    border-bottom: solid 1px #c9c9c9;
+    margin: 2em 0;
+}
+
+hr.major {
+    margin: 3em 0;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
 }

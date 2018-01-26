@@ -6,10 +6,16 @@
 @import "../../../toolbox/sass/myMixins/breakpoints.scss";
 
 @import "_reset";
-@import 'utils/_variables';
-
+/*@import 'utils/_variables';*/
+@import 'base/_grid';
 @import 'base/_globals';
 @import 'base/_typography';
+
+
+/*
+
 @import 'base/_navigation';
-@import 'base/_grid';
-@import 'base/_layout';
+
+@import 'base/_layout';*/
+
+@import '_vorlage';
